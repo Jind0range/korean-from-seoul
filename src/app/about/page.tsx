@@ -21,9 +21,6 @@ export default function AboutPage() {
           and living in the city means being immersed in the language every day. We bring that 
           first-hand experience directly to you.
         </p>
-        <p>
-          Got questions or suggestions? Feel free to reach out through our social channels!
-        </p>
       </div>
     </div>
   );
