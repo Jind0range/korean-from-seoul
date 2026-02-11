@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${notoSansKR.variable}`}>
-      <body className="min-h-screen bg-white font-sans text-slate-900 antialiased flex flex-col" style={{ fontFamily: "var(--font-inter), var(--font-noto), sans-serif" }}>
+      <body className="min-h-screen bg-stone-50 font-sans text-slate-900 antialiased flex flex-col" style={{ fontFamily: "var(--font-inter), var(--font-noto), sans-serif" }}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
