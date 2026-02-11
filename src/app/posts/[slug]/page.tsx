@@ -23,18 +23,18 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-16">
-      <Link href="/posts" className="mb-8 inline-flex items-center gap-1 text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
+      <Link href="/posts" className="mb-8 inline-flex items-center gap-1 text-sm text-rose-500 hover:text-rose-600 transition-colors">
         ← Back to posts
       </Link>
       <header className="mb-10">
-        <time className="text-sm font-medium text-indigo-600">{meta.date}</time>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-indigo-950 sm:text-4xl">
+        <time className="text-sm font-medium text-rose-500">{meta.date}</time>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight text-stone-800 sm:text-4xl">
           {meta.title}
         </h1>
         {meta.tags && meta.tags.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-2">
             {meta.tags.map((tag) => (
-              <span key={tag} className="rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700">
+              <span key={tag} className="rounded-full bg-rose-50 px-3 py-1 text-xs font-medium text-rose-600">
                 {tag}
               </span>
             ))}

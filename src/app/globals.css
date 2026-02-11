@@ -1,2 +1,80 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+/* Custom prose styles for beautiful markdown rendering */
+.prose-custom {
+  /* Tables */
+  & table {
+    @apply w-full border-collapse overflow-hidden rounded-lg;
+  }
+  & thead {
+    @apply bg-rose-50;
+  }
+  & th {
+    @apply border-b-2 border-rose-200 px-4 py-3 text-left text-sm font-semibold text-rose-900;
+  }
+  & td {
+    @apply border-b border-stone-200 px-4 py-3 text-sm;
+  }
+  & tbody tr:nth-child(even) {
+    @apply bg-stone-50;
+  }
+  & tbody tr:hover {
+    @apply bg-rose-50/50;
+  }
+
+  /* Blockquotes */
+  & blockquote {
+    @apply relative my-6 rounded-r-lg border-l-4 border-rose-400 bg-rose-50/60 px-6 py-4 italic text-stone-700;
+    quotes: none;
+  }
+  & blockquote p:first-of-type::before {
+    content: none;
+  }
+  & blockquote p:last-of-type::after {
+    content: none;
+  }
+
+  /* Code blocks */
+  & pre {
+    @apply my-6 rounded-xl bg-stone-900 p-5 text-sm leading-relaxed shadow-sm;
+  }
+  & :not(pre) > code {
+    @apply rounded-md bg-rose-50 px-1.5 py-0.5 text-sm font-medium text-rose-700;
+  }
+  & :not(pre) > code::before,
+  & :not(pre) > code::after {
+    content: none;
+  }
+
+  /* Headings */
+  & h1, & h2, & h3, & h4 {
+    @apply font-bold text-stone-800;
+  }
+  & h2 {
+    @apply mt-10 mb-4 pb-2 border-b border-stone-200;
+  }
+
+  /* Links */
+  & a {
+    @apply text-rose-600 underline decoration-rose-300 underline-offset-2 transition-colors hover:text-rose-700 hover:decoration-rose-400;
+  }
+
+  /* Lists */
+  & ul > li::marker {
+    @apply text-rose-400;
+  }
+  & ol > li::marker {
+    @apply text-rose-500 font-medium;
+  }
+
+  /* Horizontal rule */
+  & hr {
+    @apply my-8 border-stone-200;
+  }
+
+  /* Images */
+  & img {
+    @apply rounded-xl shadow-sm;
+  }
+}

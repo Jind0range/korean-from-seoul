@@ -13,10 +13,10 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-stone-200 bg-white/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold tracking-tight text-indigo-950">
-          Korean<span className="text-indigo-600"> From Seoul</span>
+        <Link href="/" className="text-xl font-bold tracking-tight text-stone-800">
+          Korean<span className="text-rose-500"> From Seoul</span>
         </Link>
 
         {/* Desktop */}
@@ -25,7 +25,7 @@ export default function Header() {
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="text-sm font-medium text-slate-600 transition-colors hover:text-indigo-600"
+                className="text-sm font-medium text-stone-500 transition-colors hover:text-rose-500"
               >
                 {l.label}
               </Link>
@@ -35,7 +35,7 @@ export default function Header() {
 
         {/* Mobile toggle */}
         <button
-          className="sm:hidden text-slate-600"
+          className="sm:hidden text-stone-500"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -51,12 +51,12 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <ul className="border-t border-slate-200 bg-white px-6 py-4 sm:hidden">
+        <ul className="border-t border-stone-200 bg-white px-6 py-4 sm:hidden">
           {links.map((l) => (
             <li key={l.href} className="py-2">
               <Link
                 href={l.href}
-                className="text-sm font-medium text-slate-600 hover:text-indigo-600"
+                className="text-sm font-medium text-stone-500 hover:text-rose-500"
                 onClick={() => setOpen(false)}
               >
                 {l.label}
